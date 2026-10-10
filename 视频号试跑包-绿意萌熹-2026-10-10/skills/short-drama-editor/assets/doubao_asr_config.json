@@ -1,0 +1,17 @@
+{
+  "provider": "bytedance-openspeech-doubao-asr",
+  "flash_url": "https://openspeech.bytedance.com/api/v3/auc/bigmodel/recognize/flash",
+  "resource_id": "volc.bigasr.auc_turbo",
+  "app_id": "${ENV:DOUBAO_APP_ID}",
+  "access_token": "${ENV:DOUBAO_ACCESS_TOKEN}",
+  "request_defaults": {
+    "model_name": "bigmodel",
+    "enable_itn": true,
+    "show_utterances": true
+  },
+  "_setup": [
+    "首次使用：在系统环境变量里设置 DOUBAO_APP_ID 和 DOUBAO_ACCESS_TOKEN。",
+    "凭据来自火山引擎控制台 → 语音技术 → 语音识别（流式极速版 auc_turbo）。",
+    "也可把上面的 ${ENV:...} 直接替换成你自己的明文凭据（仅限本机、勿提交或分享）。"
+  ]
+}
